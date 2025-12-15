@@ -1,7 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("hello blue angel");
-Console.WriteLine("The current time is: " + DateTime.Now);
 
+Console.WriteLine(5/10);
 if(args.Length>0)
 {
     string message = string.Join(" ", args);
