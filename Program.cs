@@ -1,15 +1,23 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿string[] fraudulentOrderIds = new string[10];
 
-Console.WriteLine(5/10);
-if(args.Length>0)
+fraudulentOrderIds[0] = "A123";
+fraudulentOrderIds[1] = "B456";     
+fraudulentOrderIds[2] = "C789";
+fraudulentOrderIds[3] = "D012";
+fraudulentOrderIds[4] = "E345";
+fraudulentOrderIds[5] = "F678";
+fraudulentOrderIds[6] = "A123";
+fraudulentOrderIds[7] = "B456";     
+fraudulentOrderIds[8] = "C789";
+fraudulentOrderIds[9] = "D012";
+
+foreach (string orderId in fraudulentOrderIds)
 {
-    string message = string.Join(" ", args);
-    Console.WriteLine("You passed the following arguments: " + message);
-}else
-{
-    while(Console.ReadLine() is string line && line.Length>0)
+    if(orderId.ToLower().StartsWith("a") || orderId.StartsWith("B"))
     {
-        Console.WriteLine("Please enter some text (or press Enter to exit): ");
-        Console.WriteLine("You entered: " + line);
+        Console.WriteLine(orderId);
+    } else
+    {
+        Console.WriteLine("Not a fraudulent order ID.");
     }
 }
